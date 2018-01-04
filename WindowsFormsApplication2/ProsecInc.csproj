@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{329645D3-7020-48BE-98AA-807672B2BF64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProsecInc</RootNamespace>
+    <AssemblyName>ProsecInc</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>D:\Projects\Prosec\QuangNHd\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://h2618679.stratoserver.net:8080/update/</InstallUrl>
+    <ProductName>Prosec Inc</ProductName>
+    <PublisherName>Prosec Inc</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F1957082C6FBAA19F32D3E2357E5F392D1A36DA7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProsecInc_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>prosec.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\SOFTWARE\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineIoClientDotNet, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EngineIoClientDotNet.1.0.3\lib\net40\EngineIoClientDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ManagedWifi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\managedwifi.1.1.0\lib\net20\ManagedWifi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReadOnlyCollectionsInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReadOnlyCollectionInterfaces.1.0.0\lib\NET40-client\ReadOnlyCollectionsInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SocketIoClientDotNet, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SocketIoClientDotNet.1.0.3\lib\net40\SocketIoClientDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.9.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.ClientEngine.Core.0.9.0\lib\net40-client\SuperSocket.ClientEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable.Net40, Version=1.0.27.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.Net40.1.0.30.17\lib\net40\System.Collections.Immutable.Net40.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebSocket4Net, Version=0.15.1.10, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocket4Net.0.15.1\lib\net40\WebSocket4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Address.cs" />
+    <Compile Include="Classes\Logtime.cs" />
+    <Compile Include="Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\ContaktControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\ContaktControl.Designer.cs">
+      <DependentUpon>ContaktControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitControl.Designer.cs">
+      <DependentUpon>SicherheitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitHelp.Designer.cs">
+      <DependentUpon>SicherheitHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitSecurity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitSecurity.Designer.cs">
+      <DependentUpon>SicherheitSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\SicherheitUpdate.Designer.cs">
+      <DependentUpon>SicherheitUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\SystemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\SystemControl.Designer.cs">
+      <DependentUpon>SystemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\SystemNetzwerkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\SystemNetzwerkControl.Designer.cs">
+      <DependentUpon>SystemNetzwerkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel\SystemProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPanel\SystemProcess.Designer.cs">
+      <DependentUpon>SystemProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extend\AddressUtil.cs" />
+    <Compile Include="Extend\ContextMenus.cs" />
+    <Compile Include="Extend\InfoDevice.cs" />
+    <Compile Include="Extend\LoadingProcess.cs" />
+    <Compile Include="Extend\LogUtil.cs" />
+    <Compile Include="Extend\MultiControlProcess.cs" />
+    <Compile Include="Extend\ProSecIcon.cs" />
+    <Compile Include="Extend\RegistryUtil.cs" />
+    <Compile Include="Extend\VersionUtil.cs" />
+    <Compile Include="Extend\WlanClient.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProSec.Designer.cs">
+      <DependentUpon>frmProSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\ContaktControl.resx">
+      <DependentUpon>ContaktControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\SicherheitControl.resx">
+      <DependentUpon>SicherheitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\SicherheitHelp.resx">
+      <DependentUpon>SicherheitHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\SicherheitSecurity.resx">
+      <DependentUpon>SicherheitSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\SicherheitUpdate.resx">
+      <DependentUpon>SicherheitUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\SystemControl.resx">
+      <DependentUpon>SystemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\SystemNetzwerkControl.resx">
+      <DependentUpon>SystemNetzwerkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPanel\SystemProcess.resx">
+      <DependentUpon>SystemProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProSec.resx">
+      <DependentUpon>frmProSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bg01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bg02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\btnX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\doted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\head01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\head01_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\head02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\head02_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\head03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\head03_active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\p_logo001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\p_logo002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\infodoted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\LogoInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\LogoInfo01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\LogoInfo02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\contact1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\contact2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\contact3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProsecInc_TemporaryKey.pfx" />
+    <None Include="Resources\bluetooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ethernet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linesystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\er_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p_logo003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suc_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wr_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closehelp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bluetooth.active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\bluetooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ethernet.active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ethernet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\wifi.active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\wifi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\prosec.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="prosec.ico" />
+    <None Include="Resources\update3.png" />
+    <None Include="Resources\update2.png" />
+    <None Include="Resources\update1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
